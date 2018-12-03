@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Loops with break and continue</title>
+</head>
+
+<body>
+	
+	<script type="text/javascript">
+		while(true) { //uh oh! Infinite loop... or is it?
+			var score = eval(prompt("What was your score on the quiz?"));
+			if ( score < 0 || score> 100) {
+				alert("Stop lying.");
+				continue; //Go back to the beginning of while loop
+			}
+
+			if( score >= 90)
+				{alert("Haha, you got an A, nerd!");}
+			else if( score >= 80 )
+				{alert("Congratulations, you got a B, which is ALMOST an A!");}
+			else if( score >= 70)
+				{alert("I think you need a different study method... you got a C.");}
+			else if( score >= 60)
+				{alert("Well, you didn't fail... congratulations you got a D?");}
+			else
+				{alert("If I were you I wouldn't go home tonight... F");}
+
+			var more_scores = confirm("Would you like to try a different score?");
+			if( !more_scores ) {
+				break; //end loop
+			}
+		}
+	
+	
+	
+	
+	
+	</script>
+</body>
+</html>

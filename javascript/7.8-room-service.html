@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>7.8 - Room Service</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		var hour = Number(prompt("What hour is it? ie. 7 for 7am, 15 for 3pm"));
+		// bonus + 2, automatically detect what time it is instead of asking
+		
+		
+		
+		switch(hour) {
+				//before breakfast
+			
+				
+				//breakfast
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+			case 10:
+				alert("We are serving a continental breakfast in the lobby.");
+				break;
+				
+				//lunch
+			case 11:
+			case 12:
+			case 13:
+			case 14:
+				alert("Our restaurant is open.");
+				break;
+				
+				//after lunch
+			case 15: 
+			case 16:
+				alert("You may wait for dinner or get a snack elsewhere.");
+				break;
+				
+				//dinner
+			case 17:
+			case 18:
+			case 19:
+			case 20:
+			case 21:
+				alert("You may order room service or visit our resrtaurant.");
+				break;
+				
+				//after dinner
+	
+				
+			default:
+				alert("Error, we are closed.");
+				   }
+				confirm("Would you like to make a reservation for lunch?");
+			
+			var times = [
+				"11:00 AM",
+				"11:30 AM",
+				"12:00 PM",
+				"12:30 PM",
+				"1:00 PM",
+				"1:30 PM",
+				"2:00 PM",
+			];
+			
+		
+			var time = times[Math.floor(Math.random())];
+		
+			document.write("You have a reservation at " + time + ".");
+		
+	
+	</script>
+</body>
+</html>
