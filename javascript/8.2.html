@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Global Variable</title>
+	
+	<script type="text/javascript">
+	
+		var CookieClicker = {
+			cookies: 0,
+			click: function() {
+				this.cookies++;
+				if (typeof(Storage) !== "undefined") {
+					localStorage.setItem("cookies", this.cookies);
+				} else {
+					console.log("Sorry, your browser does not support Web Storage...");
+				}
+				this.update_screen();
+			},
+			update_screen:function () {
+				document.getElementById("output").innerHTML = this.cookies;
+			},
+			init: function() {
+				if(typeof(Storage) !== "undefined") {
+					var c = localStorage.getItem("cookies");
+					if(c != null) {
+						CookieClicker.cookies = Number(c);
+						CookieClicker.update_screen();
+					}
+				} else {
+					console.log("Sorry, your browser does not support Web Storage...");
+				}
+			}
+		}
+		
+		window.onload = CookieClicker.init;
+		
+		
+		
+	//var cookies = 0;
+	//	function cookie_clicker() {
+		//	cookies++;
+		//	document.getElementById("output").innerHTML = cookies;
+		//}
+	
+	
+	
+	</script>
+</head>
+
+<body>
+	
+	<a href="JavaScript:CookieClicker.click();"><img src="../images/cookie2.jpg" alt="Cookie"></a>
+	<p id="output">0</p>
+	
+</body>
+</html>
